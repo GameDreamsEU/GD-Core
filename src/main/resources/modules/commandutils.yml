@@ -1,6 +1,11 @@
 enabled: true
 
+canceled-command-sound:
+  name: "gamedreams:error"
+  volume: 1.0
+  pitch: 1.0
+
 blocked-commands:
   - "example"
 
-config-version: 1
+config-version: 2

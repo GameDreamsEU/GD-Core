@@ -1,7 +1,9 @@
 package eu.gamedreams.gdcore.modules.commandutils;
 
 import eu.gamedreams.gdcore.modules.Module;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerCommandSendEvent;
@@ -24,7 +26,7 @@ public class CommandUtilsModule extends Module implements Listener {
         this.handleTabComplete(event);
     }
 
-    @EventHandler
+    @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
         this.handleCommandPreProcess(event);
     }
@@ -41,6 +43,16 @@ public class CommandUtilsModule extends Module implements Listener {
     public void handleCommandPreProcess(PlayerCommandPreprocessEvent event) {
 
         if (!isEnabled) return;
+
+        if(event.isCancelled()) {
+            Player player = event.getPlayer();
+            player.playSound(
+                    player.getLocation(),
+                    moduleConfiguration.getString("canceled-command-sound.name"),
+                    moduleConfiguration.getFloat("canceled-command-sound.volume"),
+                    moduleConfiguration.getFloat("canceled-command-sound.pitch")
+            );
+        }
 
         String originalCommand = event.getMessage();
         String[] args = originalCommand.split(" ");
