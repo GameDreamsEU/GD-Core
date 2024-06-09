@@ -1,0 +1,6 @@
+enabled: true
+
+regex: '^(?:(?!\\u0085)[ -ž])*$'
+deny-message: '<gradient:#55FFFF:white><bold>ɢᴀᴍᴇᴅʀᴇᴀᴍs<reset><gray> » <#f40c0c>ᴛᴠá ᴢᴘʀáᴠᴀ ᴏʙsᴀʜᴜᴊᴇ ɴᴇᴘᴏᴠᴏʟᴇɴé sʏᴍʙᴏʟʏ!'
+
+config-version: 1

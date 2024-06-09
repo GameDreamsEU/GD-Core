@@ -1,0 +1,17 @@
+enabled: true
+
+module-editor:
+  # Use %modules% for list of loaded modules
+  available-modules: '<#3690fa><bold>〔!〕<#9bd7fa>ᴅᴏsᴛᴜᴘɴé ᴍᴏᴅᴜʟʏ: <#3690fa>%modules%'
+  available-modules-splitter: '<#9bd7fa>,<#3690fa> '
+  module-already-disabled: <#f40c0c><bold>〔!〕</bold><#fd3434>ᴛᴇɴᴛᴏ ᴍᴏᴅᴜʟ ᴜž ᴊᴇ ᴠʏᴘɴᴜᴛý!
+  module-disabled: <#50bb0a><bold>〔!〕</bold><#66ef0c>ᴍᴏᴅᴜʟ ᴠʏᴘɴᴜᴛý!
+  module-already-enabled: <#f40c0c><bold>〔!〕</bold><#fd3434>ᴛᴇɴᴛᴏ ᴍᴏᴅᴜʟ ᴜž ᴊᴇ ᴢᴀᴘɴᴜᴛý!
+  module-enabled: <#50bb0a><bold>〔!〕</bold><#66ef0c>ᴍᴏᴅᴜʟ ᴢᴀᴘɴᴜᴛý!
+  module-reloaded: <#50bb0a><bold>〔!〕</bold><#66ef0c>ᴍᴏᴅᴜʟ ʀᴇʟᴏᴀᴅɴᴜᴛý!
+  reload-usage: '<#9bd7fa>ᴘᴏᴜžɪᴛí: <#66ef0c>/ɢᴅ-ᴄᴏʀᴇ ʀᴇʟᴏᴀᴅ <ᴍᴏᴅᴜʟᴇ>'
+  enable-usage: '<#9bd7fa>ᴘᴏᴜžɪᴛí: <#66ef0c>/ɢᴅ-ᴄᴏʀᴇ ᴇɴᴀʙʟᴇ <ᴍᴏᴅᴜʟᴇ>'
+  disable-usage: '<#9bd7fa>ᴘᴏᴜžɪᴛí: <#66ef0c>/ɢᴅ-ᴄᴏʀᴇ ᴅɪsᴀʙʟᴇ <ᴍᴏᴅᴜʟᴇ>'
+  no-permission: <#f40c0c><bold>〔!〕</bold><#fd3434>ɴᴀ ᴛᴏᴛᴏ ɴᴇᴍáš ᴘᴇʀᴍɪsᴇ!
+
+config-version: 2

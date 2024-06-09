@@ -1,0 +1,29 @@
+enabled: true
+
+cooldown:
+  # In milliseconds
+  cooldown-time: 3000
+  # %time% displays remaining time in seconds
+  deny-message: <#f40c0c><bold>〔!〕</bold><#fd3434>ᴅᴀʟší ᴢᴘʀáᴠᴜ ᴍůžᴇš ᴘᴏsʟᴀᴛ ᴀž ᴢᴀ <#f40c0c><#fd3434>%time%s!
+
+capslock:
+  # Minimum length the message needs to have in order to start checking capslock (excluding player names)
+  minimum-characters: 5
+  # Value between 0 and 1. How many capital letters a message must have to be blocked
+  capslock-percentage: 0.6
+  deny-message: <#f40c0c><bold>〔!〕</bold><#fd3434>ᴠʏᴘɴɪ ᴘʀᴏsíᴍ ᴄᴀᴘsʟᴏᴄᴋ!
+
+blacklisted-words:
+  words:
+    - kurv
+    - píč
+    - negr
+    - negř
+    - kokot
+    - kkt
+    - zmrd
+    - mrdk
+    - kund
+  deny-message: <#f40c0c><bold>〔!〕</bold><#fd3434>ᴛᴠá ᴢᴘʀáᴠᴀ ᴏʙsᴀʜᴜᴊᴇ ɴᴇᴠʜᴏᴅɴá sʟᴏᴠᴀ!
+
+config-version: '2'

@@ -1,0 +1,6 @@
+enabled: true
+
+blocked-commands:
+  - "example"
+
+config-version: 1

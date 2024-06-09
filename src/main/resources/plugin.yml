@@ -1,0 +1,23 @@
+name: GD-Core
+version: '${project.version}'
+main: eu.gamedreams.gdcore.GD_Core
+description: Core plugin for the GameDreams server
+website: https://gamedreams.eu
+api-version: '1.20'
+authors: [ SengyEU, DarkReaper231 ]
+commands:
+  gd-core:
+    description: "Command of the main module"
+permissions:
+  gamedreams.core.chat.cooldown.bypass:
+    description: "Bypasses chat cooldown"
+  gamedreams.core.chat.capslock.bypass:
+    description: "Bypasses capslock checks"
+  gamedreams.core.chat.blacklistedwords.bypass:
+    description: "Bypasses blacklisted words checks"
+  gamedreams.core.main.admin:
+    description: "Admin commands"
+  gamedreams.core.charfilter.bypass:
+    description: "Bypasses filter of unwanted characters"
+
+
