@@ -26,7 +26,7 @@ public class CommandUtilsModule extends Module implements Listener {
         this.handleTabComplete(event);
     }
 
-    @EventHandler(priority = EventPriority.HIGHEST)
+    @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerCommandPreprocess(PlayerCommandPreprocessEvent event) {
         this.handleCommandPreProcess(event);
     }
