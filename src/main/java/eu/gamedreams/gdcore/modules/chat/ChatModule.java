@@ -20,12 +20,16 @@ public class ChatModule extends Module implements Listener {
     private final HashMap<UUID, Long> cooldowns = new HashMap<>();
 
     public ChatModule() {
-        this.name = "chat";
         this.isEnabled = false;
     }
 
     @Override
-    protected void register() {
+    public String getName() {
+        return "chat";
+    }
+
+    @Override
+    public void register() {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 

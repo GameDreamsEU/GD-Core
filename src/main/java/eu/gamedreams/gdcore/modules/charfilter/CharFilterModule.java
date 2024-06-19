@@ -11,8 +11,12 @@ public class CharFilterModule extends Module {
     private LogFilter logFilter;
 
     public CharFilterModule() {
-        this.name = "charfilter";
         this.isEnabled = false;
+    }
+
+    @Override
+    public String getName() {
+        return "charfilter";
     }
 
     @Override
@@ -28,7 +32,7 @@ public class CharFilterModule extends Module {
     }
 
     @Override
-    protected void register() {
+    public void register() {
         logFilter = new LogFilter(moduleConfiguration.getString("regex"), isEnabled);
         logFilter.registerFilter();
         plugin.getServer().getPluginManager().registerEvents(new FilterListeners(this), plugin);

@@ -11,13 +11,17 @@ public class MainModule extends Module {
     private final ModuleManager moduleManager;
 
     public MainModule(ModuleManager moduleManager) {
-        this.name = "main";
         this.isEnabled = false;
         this.moduleManager = moduleManager;
     }
 
     @Override
-    protected void register() {
+    public String getName() {
+        return "main";
+    }
+
+    @Override
+    public void register() {
         Objects.requireNonNull(plugin.getCommand("gd-core")).setExecutor(new GDCoreCommand(this, plugin, moduleManager));
     }
 }

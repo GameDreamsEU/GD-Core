@@ -12,12 +12,16 @@ import java.util.List;
 
 public class CommandUtilsModule extends Module implements Listener {
     public CommandUtilsModule() {
-        this.name = "commandutils";
         this.isEnabled = false;
     }
 
     @Override
-    protected void register() {
+    public String getName() {
+        return "commandutils";
+    }
+
+    @Override
+    public void register() {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
@@ -44,7 +48,7 @@ public class CommandUtilsModule extends Module implements Listener {
 
         if (!isEnabled) return;
 
-        if(event.isCancelled()) {
+        if (event.isCancelled()) {
             Player player = event.getPlayer();
             player.playSound(
                     player.getLocation(),
