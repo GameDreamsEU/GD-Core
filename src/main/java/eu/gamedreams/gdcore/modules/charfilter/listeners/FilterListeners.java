@@ -28,19 +28,19 @@ public class FilterListeners implements Listener {
         this.moduleConfiguration = charFilterModule.getModuleConfiguration();
     }
 
-    @EventHandler
+    @EventHandler (ignoreCancelled = true)
     public void onChat(AsyncChatEvent event) {
         String message = ComponentUtils.serializePlain(event.message());
         validate(message, event, event.getPlayer());
     }
 
-    @EventHandler
+    @EventHandler (ignoreCancelled = true)
     public void onCommand(PlayerCommandPreprocessEvent event) {
         String command = event.getMessage();
         validate(command, event, event.getPlayer());
     }
 
-    @EventHandler
+    @EventHandler (ignoreCancelled = true)
     public void onAnvilRename(PrepareAnvilEvent e) {
         ItemStack resultItem = e.getResult();
         if (resultItem == null) return;
@@ -55,14 +55,14 @@ public class FilterListeners implements Listener {
         }
     }
 
-    @EventHandler
+    @EventHandler (ignoreCancelled = true)
     public void onSignChange(SignChangeEvent e) {
         for (Component line : e.lines()) {
             validate(ComponentUtils.serializePlain(line), e, e.getPlayer());
         }
     }
 
-    @EventHandler
+    @EventHandler (ignoreCancelled = true)
     public void onBookSign(PlayerEditBookEvent e) {
         String book = e.getNewBookMeta().getAsString();
         validate(book, e, e.getPlayer());
